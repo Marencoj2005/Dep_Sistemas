@@ -66,5 +66,32 @@ class Metodo():
             else:
                 print("Opción Invalida")    
             
-        print("Inventario guardado")
+            print("Inventario guardado")
+            if len(pila_pc) == 0:
+                return pila_tablets
+            elif len(pila_tablets) == 0:
+                return pila_pc
+
+    def buscar(self, pila_pc, pila_tablets):
+        print("¿Que desea buscar? Computador[c] o Tablet[t] ?")
+        option = input()
+        if option.lower() == "c":
+            print("Ingrese el serial del computador")
+            serial_search = input()
+            pila_pc_auxiliar = []
+            for i in pila_pc:
+                if i.get_serial() != serial_search:
+                    pila_pc_auxiliar.append(i)
+                else:
+                    print("ENCONTADOR")
+                    print("Serial: ", i.get_serial())
+                    print("Marca: ", i.get_marca())
+                    print("Memoria Ram: ", i.get_memoria_ram())
+                    print("Disco Duro: ", i.get_disco_duro())
+                    print("Precio: ", i.get_precio())
+                    print("Nombre Usuario: ", i.get_nombre_usuario())
+                    print("Disponible: ", i.get_disponible())
+                    print("Cantidad: ", i.get_cantidad())  
+
+            
     
