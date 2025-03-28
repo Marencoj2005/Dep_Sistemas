@@ -5,6 +5,7 @@ class Tablet():
     precio = None
     nombre_usuario = None
     disponible = None
+    cantidad = None
 
     def __init__(self):
         pass
@@ -21,6 +22,8 @@ class Tablet():
         self.disponible =disponible
     def set_tamano(self, tamano):
         self.tamano =tamano
+    def set_cantidad(self, cantidad):
+        self.cantidad = cantidad
 
     ## getters
     def get_serial(self):
